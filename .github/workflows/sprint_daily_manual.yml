@@ -16,16 +16,16 @@ jobs:
         uses: ./
         with:
           NOTION_KEY: ${{ secrets.NOTION_KEY }}
-          NOTION_DB_BACKLOG: 231c684795fd49aeb387e41110c2af83
-          NOTION_DB_SPRINT_SUMMARY: f762582562d34d6e8e2e4b89050c09be
-          NOTION_DB_DAILY_SUMMARY: ef4f661300064ee48a907a3d1348767b
+          NOTION_DB_BACKLOG: ecb201f856f0467d9b30be50a212a895
+          NOTION_DB_SPRINT_SUMMARY: 0d3b0624eeda43b4bf6799df4ece2c8a
+          NOTION_DB_DAILY_SUMMARY: 0c694147671740ad8ee9879ecd4fc53b
           NOTION_PROPERTY_SPRINT: Sprint
           NOTION_PROPERTY_ESTIMATE: Estimate
           NOTION_PROPERTY_PATTERN_STATUS_EXCLUDE: Completed|Released
       - name: Commit burndown chart
         run: |
-          git config --local user.email "ting.szeying@gmail.com"
-          git config --local user.name "szenius"
+          git config --local user.email "cestivan@163.com"
+          git config --local user.name "Ivan"
           git add ./out
           git commit -m "run: upload new burndown chart"
       - name: Push changes
